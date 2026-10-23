@@ -1,0 +1,139 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luis Miguel | El Sol de México</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <a class="logo" href="#inicio">LUIS MIGUEL</a>
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#biografia">Biografía</a>
+            <a href="#albumes">Álbumes</a>
+            <a href="#musica">Música</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="inicio">
+            <div class="hero-content">
+                  <div class="hero-imagen">
+        <img
+            src="imagenes/Luis%20Miguel,%20Aries%20(Limited%20Edition)_.jpg"
+            alt="Portada del álbum Aries de Luis Miguel"
+        >
+    </div>
+</section>
+                <p class="subtitulo">EL SOL DE MÉXICO</p>
+                <h1>Luis Miguel</h1>
+                <p>Una voz inolvidable. Una leyenda de la música.</p>
+                <a href="#musica" class="boton">♫ Escuchar música</a>
+            </div>
+        </section>
+
+        <section class="seccion" id="biografia">
+            <p class="subtitulo">SU HISTORIA</p>
+            <h2>Una leyenda musical</h2>
+            <p class="descripcion">
+                Luis Miguel es un cantante reconocido por su potente voz
+                y sus interpretaciones de pop latino, boleros y baladas.
+                Su música ha conquistado a varias generaciones.
+            </p>
+        </section>
+
+        <section class="seccion" id="albumes">
+            <p class="subtitulo">SU LEGADO</p>
+            <h2>Álbumes destacados</h2>
+
+            <div class="albumes">
+                <article class="tarjeta">
+                    <div class="disco">♫</div>
+                    <h3>Romance</h3>
+                    <p>Boleros inolvidables</p>
+                </article>
+
+                <article class="tarjeta">
+                    <div class="disco">♪</div>
+                    <h3>Segundo Romance</h3>
+                    <p>Elegancia y sentimiento</p>
+                </article>
+
+                <article class="tarjeta">
+                    <div class="disco">♬</div>
+                    <h3>Aries</h3>
+                    <p>Pop latino</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="seccion musica" id="musica">
+            <p class="subtitulo">TU MOMENTO MUSICAL</p>
+            <h2>Reproductor de música</h2>
+            <p>Selecciona una canción para escucharla.</p>
+
+            <div class="reproductor">
+                <div class="portada">♫</div>
+                <h3 id="titulo">La incondicional</h3>
+                <p id="estado">Luis Miguel</p>
+
+                <audio id="audio" preload="metadata"></audio>
+
+                <div class="controles">
+                    <button id="anterior" aria-label="Canción anterior">⏮</button>
+                    <button id="reproducir" class="play"
+                        aria-label="Reproducir">▶</button>
+                    <button id="siguiente" aria-label="Siguiente canción">⏭</button>
+                </div>
+
+                <input id="progreso" type="range"
+                    min="0" max="100" value="0" aria-label="Progreso">
+
+                <div class="tiempos">
+                    <span id="actual">0:00</span>
+                    <span id="duracion">0:00</span>
+                </div>
+
+                <p id="mensaje" aria-live="polite">
+                    Selecciona reproducir para comenzar.
+                </p>
+
+                <div class="lista-canciones">
+                    <button class="cancion activa" data-indice="0">
+                        01. La incondicional
+                    </button>
+                    <button class="cancion" data-indice="1">
+                        02. Ahora te puedes marchar
+                    </button>
+                    <button class="cancion" data-indice="2">
+                        03. Hasta que me olvides
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Proyecto de fan · Luis Miguel ©</p>
+        <p>Una página hecha con pasión por la música.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+<audio
+    id="audio"
+    preload="auto"
+    autoplay
+    loop
+>
+</audio>
+
+<button id="activarMusica" class="boton">
+    🎵 Activar música
+</button>
